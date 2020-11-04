@@ -83,12 +83,12 @@
       </nav>
 
       <main>
-        <route path="react">
-          <application name="@demo/react-demo"></application>
-        </route>
-
         <route path="vue">
           <application name="@demo/vue-demo"></application>
+        </route>
+
+        <route default>
+          <application name="@demo/react-demo"></application>
         </route>
       </main>
     </single-spa-router>
