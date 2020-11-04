@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Root Config</title>
+  <style type="text/css">
+    body {
+      color: #333333;
+      margin: 0;
+      font-size: 16px;
+      font-family: Source Sans Pro, Serif, sans-serif;
+      font-weight: 400;
+      line-height: 1.43;
+      background-color: #fafafa;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .navigation {
+      color: #fff;
+      width: 256px;
+      background-color: #007578;
+    }
+  </style>
 
   <!--
     Remove this if you only support browsers that support async/await.
@@ -78,7 +99,8 @@
 
   <template id="single-spa-layout">
     <single-spa-router>
-      <nav>
+      <div class="container">
+      <nav class="navigation">
         <application name="@demo/vue-demo2"></application>
       </nav>
 
@@ -91,6 +113,7 @@
           <application name="@demo/react-demo"></application>
         </route>
       </main>
+      </div>
     </single-spa-router>
   </template>
 </head>
