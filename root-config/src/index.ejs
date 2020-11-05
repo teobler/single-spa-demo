@@ -74,10 +74,11 @@
       "imports": {
         "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js",
-        "@demo/react-demo": "//localhost:3000/demo-react-demo.js",
-        "@demo/vue-demo": "//localhost:3001/js/app.js",
-        "@demo/vue-demo2": "//localhost:3002/js/app.js",
-        "@demo/root-config": "//localhost:9000/demo-root-config.js"
+        "@teobler/react-demo": "//localhost:3000/demo-react-demo.js",
+        "@teobler/vue-demo": "//localhost:3001/js/app.js",
+        "@teobler/navigation-app-vue": "//localhost:3002/js/app.js",
+        "@teobler/auth": "//localhost:3003/demo-react-demo.js",
+        "@teobler/root-config": "//localhost:9000/demo-root-config.js"
       }
     }
   </script>
@@ -105,16 +106,20 @@
     <single-spa-router>
       <div class="container">
       <nav class="navigation">
-        <application name="@demo/vue-demo2"></application>
+        <application name="@teobler/navigation-app-vue"></application>
       </nav>
 
       <main>
         <route path="vue">
-          <application name="@demo/vue-demo"></application>
+          <application name="@teobler/vue-demo"></application>
+        </route>
+
+        <route path="react">
+          <application name="@teobler/react-demo"></application>
         </route>
 
         <route default>
-          <application name="@demo/react-demo"></application>
+          <application name="@teobler/auth"></application>
         </route>
       </main>
       </div>
@@ -123,7 +128,7 @@
 </head>
 <body>
   <script>
-    System.import('@demo/root-config');
+    System.import('@teobler/root-config');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
 </body>

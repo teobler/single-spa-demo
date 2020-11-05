@@ -1,5 +1,5 @@
 {
-  "name": "@teobler/react-demo",
+  "name": "@teobler/auth",
   "scripts": {
     "start": "webpack-dev-server",
     "start:standalone": "webpack-dev-server --env.standalone",

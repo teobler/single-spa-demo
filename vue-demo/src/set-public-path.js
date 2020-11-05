@@ -1,3 +1,3 @@
 import { setPublicPath } from "systemjs-webpack-interop";
 
-setPublicPath("@demo/vue-demo", 2);
+setPublicPath("@teobler/vue-demo", 2);
